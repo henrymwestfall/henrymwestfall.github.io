@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Black Knights Teleop Scouting</title>
+        <link rel="stylesheet" type="text/css" 
+            href="{{ url_for('static', filename='teleop_scouting.css') }}">
+        
+        <script src="{{ url_for('static', filename='teleop_scouting.js') }}"></script>
+    </head>
+
+    <body>
+        <span>
+            <div id="leftInterface" class="interfaceGroup">
+                <button id="coneAndHigh" onclick="coneAndHighClick()">Cone</button>
+                <button id="cubeAndMiddle" onclick="cubeAndMiddleClick()">Cube</button>
+                <button id="scoreAndBottom" onclick="scoreAndBottomClick()" disabled>SCORE</button>
+            </div>
+
+            <div id="middleInterface" class="interfaceGroup">
+                <div>
+                    <span>
+                        <label for="teamNumber">T: </label><br>
+                        <input name="teamNumber" id="teamNumber" type="text">
+                        <label for="matchNumber">M: </label><br>
+                        <input id="matchNumber" type="text">
+                    </span>
+                    <button id="alliance" onclick="toggleAlliance()">Alliance</button>
+                </div>
+                <button id="startTeleop" onclick="startTeleop()">Start Teleop</button>
+                <button id="defense" onclick="toggleDefense()">Playing Defense</button>
+                <p id="stopwatch">0.00</p>
+            </div>
+
+            <div id="rightInterface" class="interfaceGroup">
+                <button id="loadingStopwatch" onclick="loadingZoneClick()">Enter Loading Zone</button>
+                <button id="placementStopwatch" onclick="communityClick()">Enter Community</button>
+            </div>
+        </span>
+    </body>
+</html>
